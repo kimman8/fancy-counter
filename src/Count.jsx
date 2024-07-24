@@ -1,5 +1,5 @@
-const Count = (props) => {
-  return <p className="count">10</p>;
+const Count = ({ number }) => {
+  return <p className="count">{number}</p>;
 };
 
 export default Count;

@@ -1,13 +1,13 @@
 import { MinusIcon, PlusIcon } from '@radix-ui/react-icons';
 
-function CountButtons() {
+function CountButtons({ onPlus, onMinus }) {
   return (
     <div className="button-container">
       <button className="count-btn">
-        <MinusIcon className="count-btn-icon" />
+        <MinusIcon className="count-btn-icon" onClick={onMinus} />
       </button>
       <button className="count-btn">
-        <PlusIcon className="count-btn-icon" />
+        <PlusIcon className="count-btn-icon" onClick={onPlus} />
       </button>
     </div>
   );
