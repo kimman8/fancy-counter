@@ -1,7 +1,7 @@
 function Title() {
   return (
     <div>
-      <h1>fancy counter</h1>
+      <h1 className="title">fancy counter</h1>
     </div>
   );
 }

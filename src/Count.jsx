@@ -1,9 +1,5 @@
-function Count() {
-  return (
-    <div>
-      <p>0</p>
-    </div>
-  );
-}
+const Count = (props) => {
+  return <p className="count">10</p>;
+};
 
 export default Count;
