@@ -1,5 +1,5 @@
 import Count from './Count';
-import CountButtons from './CountButtons';
+import ButtonContainer from './ButtonContainer';
 import ResetButton from './ResetButton';
 import Title from './Title';
 import { useState } from 'react';
@@ -10,6 +10,7 @@ export default function Card() {
     setNumber((prev) => prev + 1);
   };
   const handleMinusClick = () => {
+    if (number === 0) return;
     setNumber((prev) => prev - 1);
   };
   const handleReset = () => {
@@ -20,7 +21,7 @@ export default function Card() {
       <Title />
       <Count number={number} />
       <ResetButton onReset={handleReset} />
-      <CountButtons onPlus={handlePlusClick} onMinus={handleMinusClick} />
+      <ButtonContainer onPlus={handlePlusClick} onMinus={handleMinusClick} />
     </div>
   );
 }
